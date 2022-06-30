@@ -36,11 +36,24 @@
         {% block extra_js %}
         {% endblock %}
 
-        <title>2 Bean or not 2 Bean</title>
+        <title>2 Bean or not 2 Bean {% block extra_title %}{% endblock %}</title>
     </head>
 
     <body>
         <header class="container-fluid fixed-top"></header>
+
+        {% if messages %}
+        <div class="messages-container"></div>
+        {% endif %}
+
+        {% block page-header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block postloadjs %}
+        {% endblock %}
 
 
     </body>
